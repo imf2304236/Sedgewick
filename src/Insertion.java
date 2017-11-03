@@ -8,7 +8,12 @@ public class Insertion {
      * @param a Array of Comparables
      */
     public static void sort(Comparable[] a) {
-
+        int N = a.length;
+        for (int i = 1; i < N-1; i++) {
+            for (int j = i; j > 0 && less(a[j], a[j-1]); j--) {
+                    exch(a, j, j-1);
+            }
+        }
     }
 
     /**
