@@ -66,4 +66,12 @@ public class Selection {
         }
         System.out.println();
     }
+
+    /**
+     * Main method to run tests
+     * @param args Array of strings to define test behavior
+     */
+    public static void main(String[] args) {
+
+    }
 }
