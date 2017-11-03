@@ -12,7 +12,7 @@ public class Selection {
     }
 
     /**
-     * Less helper function
+     * Less helper method
      * @param v Comparable object to be compared to
      * @param w Comparable object to be compared
      * @return Boolean true if v < w, false otherwise
@@ -22,7 +22,7 @@ public class Selection {
     }
 
     /**
-     * Exchange helper function
+     * Exchange helper method
      * @param a Array of Comparables to which the objects to be exchanged belong
      * @param i Int array index of first object to be exchanged
      * @param j Int array index of second object to be exchanged
@@ -40,12 +40,25 @@ public class Selection {
      */
     public static boolean isSorted(Comparable[] a) {
         for (int i = 1; i < a.length; i++) {
-            if (this.less(a[i], a[i-1])) {
+            if (less(a[i], a[i-1])) {
                 return false;
             }
-            return true;
         }
+        return true;
     }
+
+    /**
+     * Method which prints each member of the array on a single line
+     * @param a Array of Comparables to be printed
+     */
+    private static void show(Comparable[] a) {
+        for (int i = 0; i < a.length; i++) {
+            System.out.print(a[i] + " ");
+        }
+        System.out.println();
+    }
+
+
 
 
 }
