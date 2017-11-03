@@ -33,5 +33,19 @@ public class Selection {
         a[j] = t;
     }
 
+    /**
+     * Method which checks if an array is sorted
+     * @param a Array of Comparables to be checked
+     * @return Boolean true if the array is sorted, false otherwise
+     */
+    public static boolean isSorted(Comparable[] a) {
+        for (int i = 1; i < a.length; i++) {
+            if (this.less(a[i], a[i-1])) {
+                return false;
+            }
+            return true;
+        }
+    }
+
 
 }
