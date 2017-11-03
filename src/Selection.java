@@ -10,4 +10,14 @@ public class Selection {
     public static void sort(Comparable[] a) {
 
     }
+
+    /**
+     * Less helper function
+     * @param v
+     * @param w
+     * @return
+     */
+    private static boolean less(Comparable v, Comparable w) {
+        return v.compareTo(w) < 0;
+    }
 }
