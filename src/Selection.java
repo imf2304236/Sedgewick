@@ -74,7 +74,19 @@ public class Selection {
      * @param args Array of strings to define test behavior
      */
     public static void main(String[] args) {
+        String[] a = new String[8];
+        a[0] = "it";
+        a[1] = "was";
+        a[2] = "best";
+        a[3] = "the";
+        a[4] = "of";
+        a[5] = "times";
+        a[6] = "ever";
+        a[7] = "seen";
 
+        sort(a);
+        assert(isSorted(a));
+        show(a);
     }
 }
 
