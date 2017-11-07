@@ -41,7 +41,7 @@ public class Merge {
         int j = mid + 1;    // Index of smallest member of right subarray
 
         // Copy contents of a to temp from index lo to hi
-        for (int k = 0; k<a.length - 1; k++) {
+        for (int k = 0; k <= hi; k++) {
             temp[k] = a[k];
             copyCount++;
         }
