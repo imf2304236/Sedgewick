@@ -4,6 +4,7 @@
  */
 public class Merge {
     private static Comparable[] temp;
+    private static int copyCount = 0;
 
     /**
      * Recursive sort method which creates a temp array and begins sorting
@@ -42,6 +43,7 @@ public class Merge {
         // Copy contents of a to temp from index lo to hi
         for (int k = 0; k<a.length - 1; k++) {
             temp[k] = a[k];
+            copyCount++;
         }
 
         // Merge contents of a to temp
@@ -102,6 +104,7 @@ public class Merge {
      * @param args Array of strings to define test behavior
      */
     public static void main(String[] args) {
+
 
     }
 }
