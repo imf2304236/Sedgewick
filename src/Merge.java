@@ -5,6 +5,7 @@
 public class Merge {
     private static Comparable[] temp;
     private static int copyCount = 0;
+    private static int compareCount = 0;
 
     /**
      * Recursive sort method which creates a temp array and begins sorting
@@ -71,6 +72,7 @@ public class Merge {
      * @return Boolean true if v < w, false otherwise
      */
     private static boolean less(Comparable v, Comparable w) {
+        compareCount++;
         return v.compareTo(w) < 0;
     }
 
@@ -117,5 +119,6 @@ public class Merge {
         sort(a);
         if (!isSorted(a)) throw new Error();
         show(a);
+        System.out.println(copyCount);
     }
 }

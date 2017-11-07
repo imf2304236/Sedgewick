@@ -5,6 +5,9 @@ import java.util.ArrayList;
  * Created by IF on 03.11.17.
  */
 public class Selection {
+    private static int exchCount = 0;
+    private static int compareCount = 0;
+
     /**
      * Sort method
      * @param a Array of Comparables
@@ -29,6 +32,7 @@ public class Selection {
      * @return Boolean true if v < w, false otherwise
      */
     private static boolean less(Comparable v, Comparable w) {
+        compareCount++;
         return v.compareTo(w) < 0;
     }
 
@@ -42,6 +46,7 @@ public class Selection {
         Comparable t = a[i];
         a[i] = a[j];
         a[j] = t;
+        exchCount++;
     }
 
     /**
@@ -87,6 +92,8 @@ public class Selection {
         sort(a);
         if (!isSorted(a)) throw new Error();
         show(a);
+        System.out.println(compareCount);
+        System.out.println(exchCount);
     }
 }
 
