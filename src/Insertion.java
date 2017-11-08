@@ -1,10 +1,8 @@
-import java.util.ArrayList;
-
 /**
  * Sedgewick
  * Created by IF on 03.11.17.
  */
-public class Selection {
+public class Insertion {
     private static int exchCount = 0;
     private static int compareCount = 0;
 
@@ -14,14 +12,10 @@ public class Selection {
      */
     public static void sort(Comparable[] a) {
         int N = a.length;
-        for (int i = 0; i < N; i++) {
-            int min = i;
-            for (int j = i+1; j < N; j++) {
-                if (less(a[j], a[min])) {
-                    min = j;
-                }
+        for (int i = 1; i < N; i++) {
+            for (int j = i; j > 0 && less(a[j], a[j-1]); j--) {
+                    exch(a, j, j-1);
             }
-            exch(a, i, min);
         }
     }
 
@@ -90,10 +84,9 @@ public class Selection {
         a[7] = "seen";
 
         sort(a);
-        if (!isSorted(a)) throw new Error();
         show(a);
+        if (!isSorted(a)) throw new Error();
         System.out.println(compareCount);
         System.out.println(exchCount);
     }
 }
-
