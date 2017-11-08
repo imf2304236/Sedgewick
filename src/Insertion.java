@@ -3,9 +3,6 @@
  * Created by IF on 03.11.17.
  */
 public class Insertion {
-    private static int exchCount = 0;
-    private static int compareCount = 0;
-
     /**
      * Sort method
      * @param a Array of Comparables
@@ -26,7 +23,6 @@ public class Insertion {
      * @return Boolean true if v < w, false otherwise
      */
     private static boolean less(Comparable v, Comparable w) {
-        compareCount++;
         return v.compareTo(w) < 0;
     }
 
@@ -40,7 +36,6 @@ public class Insertion {
         Comparable t = a[i];
         a[i] = a[j];
         a[j] = t;
-        exchCount++;
     }
 
     /**
@@ -83,12 +78,14 @@ public class Insertion {
         a[6] = "ever";
         a[7] = "seen";
 
-        sort(a);
+        System.out.println("\nInsertion Sort:");
+        System.out.printf("Unsorted array: ");
         show(a);
+
+        sort(a);
         if (!isSorted(a)) throw new Error();
 
-        System.out.println("Insertion Sort:");
-        System.out.println("Compare Count: " + compareCount);
-        System.out.println("Exchange Count: " + exchCount);
+        System.out.print("Sorted array:   ");
+        show(a);
     }
 }
