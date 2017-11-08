@@ -86,7 +86,9 @@ public class Insertion {
         sort(a);
         show(a);
         if (!isSorted(a)) throw new Error();
-        System.out.println(compareCount);
-        System.out.println(exchCount);
+
+        System.out.println("Insertion Sort:");
+        System.out.println("Compare Count: " + compareCount);
+        System.out.println("Exchange Count: " + exchCount);
     }
 }

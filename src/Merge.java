@@ -119,6 +119,10 @@ public class Merge {
         sort(a);
         if (!isSorted(a)) throw new Error();
         show(a);
-        System.out.println(copyCount);
+
+        System.out.println("Merge Sort:");
+        System.out.println("Compare Count: " + compareCount);
+        System.out.println("Copy Count: " + copyCount);
+
     }
 }

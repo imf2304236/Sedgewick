@@ -92,8 +92,10 @@ public class Selection {
         sort(a);
         if (!isSorted(a)) throw new Error();
         show(a);
-        System.out.println(compareCount);
-        System.out.println(exchCount);
+
+        System.out.println("Selection Sort:");
+        System.out.println("Compare Count: " + compareCount);
+        System.out.println("Exchange Count: " + exchCount);
     }
 }
 
